@@ -42,7 +42,7 @@ public class Validation {
 
 	public void validatephone() {
 		inp = new Scanner(System.in);
-		String regex = "^[1-9]+{1}[0-9]+{0,2}[1-9]+{1}[0-9]+{9}$";
+		String regex = "^[1-9]{1}[0-9]{0,2}[1-9]{1}[0-9]{9}$";
 		int i=1;
 		while(i>0) {
 			System.out.println("Enter phonenumber with country code");
@@ -55,6 +55,26 @@ public class Validation {
 			System.out.println("InValid");
 			}
 		}
+		
+	}
+
+	public void validatepassword() {
+		System.out.println("Rule1: Minimum 8 characters");
+		inp = new Scanner(System.in);
+		String regex = "^[a-zA-Z]{8,}$";
+		int i=1;
+		while(i>0) {
+			System.out.println("Enter password:");
+			String pass=inp.nextLine();
+			if (pass.matches(regex)) {
+			i=-1;
+			System.out.println("Valid");
+		}
+		else  {
+			System.out.println("InValid");
+			}
+		}
+		
 		
 	}
 }

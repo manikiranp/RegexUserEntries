@@ -6,7 +6,7 @@ public class UserRegistration {
 	private static Scanner inp;
 
 	public static void main(String[] args) {
-		System.out.println("Validation of user entries in User Registration");
+		System.out.println("Validation of user entries in Ugiser Registration");
 		int cond = 1;
 		while (cond == 1) {
 			Validation menu = new Validation(); 
@@ -14,6 +14,7 @@ public class UserRegistration {
 					+ "1) Firstname\n"
 					+ "2) Lastname\n"
 					+ "4) Phonenumber\n"
+					+ "5) Password\n"
 					+ "0) Close");
 			inp = new Scanner(System.in);
 			System.out.println("Select an option:");
@@ -27,6 +28,9 @@ public class UserRegistration {
 				break;
 			case "4":
 				menu.validatephone();
+				break;
+			case "5":
+				menu.validatepassword();
 				break;
 			case "0":
 				cond=0;
