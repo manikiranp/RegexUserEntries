@@ -59,7 +59,7 @@ public class Validation {
 	}
 
 	public void validatepassword() {
-		System.out.println("Rule1: Minimum 8 characters");
+		System.out.println("Rule1: Password with Minimum 8 characters");
 		inp = new Scanner(System.in);
 		String regex = "^[a-zA-Z]{8,}$";
 		int i=1;
