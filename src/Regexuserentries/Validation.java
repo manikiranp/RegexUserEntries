@@ -59,9 +59,10 @@ public class Validation {
 	}
 
 	public void validatepassword() {
-		System.out.println("Rule1: Password with Minimum 8 characters");
+		System.out.println("Rule1: Minimum 8 characters\n"
+							+"Rule2: Should have atleast 1 uppercase");
 		inp = new Scanner(System.in);
-		String regex = "^[a-zA-Z]{8,}$";
+		String regex = "^(?=.*[A-Z])[a-zA-Z]{8,}$";
 		int i=1;
 		while(i>0) {
 			System.out.println("Enter password:");
