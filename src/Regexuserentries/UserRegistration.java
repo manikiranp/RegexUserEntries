@@ -13,6 +13,7 @@ public class UserRegistration {
 			System.out.println("User Registration:\n"
 					+ "1) Firstname\n"
 					+ "2) Lastname\n"
+					+ "4) Email\n"
 					+ "0) Close");
 			inp = new Scanner(System.in);
 			System.out.println("Select an option:");
@@ -23,6 +24,9 @@ public class UserRegistration {
 				break;
 			case "2":
 				menu.validatelastName();
+				break;
+			case "4":
+				menu.validatephone();
 				break;
 			case "0":
 				cond=0;
