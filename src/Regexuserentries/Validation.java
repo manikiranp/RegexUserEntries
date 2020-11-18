@@ -7,7 +7,7 @@ public class Validation {
 	
 	public void validateFirstname() {	
 		inp = new Scanner(System.in);
-		String regex = "^[A-Z][A-Za-z]+{2,}$";
+		String regex = "^[A-Z][A-Za-z]{2,}$";
 		int i=1;
 		while(i>0) {
 			System.out.println("Enter firstname");
@@ -24,7 +24,7 @@ public class Validation {
 
 	public void validatelastName() {
 		inp = new Scanner(System.in);
-		String regex = "^[A-Z][A-Za-z]+{2,}$";
+		String regex = "^[A-Z][A-Za-z]{2,}$";
 		int i=1;
 		while(i>0) {
 			System.out.println("Enter LastName");
