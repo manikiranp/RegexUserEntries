@@ -13,7 +13,7 @@ public class UserRegistration {
 			System.out.println("User Registration:\n"
 					+ "1) Firstname\n"
 					+ "2) Lastname\n"
-					+ "4) Email\n"
+					+ "4) Phonenumber\n"
 					+ "0) Close");
 			inp = new Scanner(System.in);
 			System.out.println("Select an option:");
