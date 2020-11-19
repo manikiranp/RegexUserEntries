@@ -1,6 +1,7 @@
 package Regexuserentries;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Validation {
 	private static Scanner inp;
@@ -80,6 +81,7 @@ public class Validation {
 		
 		
 	}
+	
 
 	public void validateEmail() {
 		inp = new Scanner(System.in);
