@@ -7,13 +7,13 @@ public class Validation {
 	private static Scanner inp;
 	
 	public boolean validateName(String name) {	
-		String regex = "^[A-Z][A-Za-z]{2,}$";
+		String regex = "^[A-Z][a-z]{2,}$";
 		Pattern pattern=Pattern.compile(regex); 
 		return pattern.matcher(name).matches();	
 	}
 
 	public boolean validatephone(String phone) {
-		String regex = "^[1-9]{1}[0-9]{0,2}[1-9]{1}[0-9]{9}$";
+		String regex = "^[+][1-9]{1}[0-9]{0,2} [1-9]{1}[0-9]{9}$";
 			if (phone.matches(regex)) 
 				return true;
 		else  
