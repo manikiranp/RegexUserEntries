@@ -18,10 +18,10 @@ public class ValidationTest {
 	
 	@Test
 	public void testValidateEmail_whenproper_returntrue() {
-		ValidateEmail validation=new ValidateEmail();
+		Validation validation=new Validation();
 		for (String name : validmails)
 		{
-		boolean result=validation.validatEmail(name);
+		boolean result=validation.validateEmail(name);
 		Assert.assertEquals(true, result);
 		}
 		
@@ -30,10 +30,10 @@ public class ValidationTest {
 
 	@Test
 	public void testValidateEmail_whenimproper_returnfalse() {
-		ValidateEmail validation=new ValidateEmail();
+		Validation validation=new Validation();
 		for (String name : Invalidmails)
 		{
-		boolean result=validation.validatEmail(name);
+		boolean result=validation.validateEmail(name);
 		Assert.assertEquals(false, result);
 		}
 	}

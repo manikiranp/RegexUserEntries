@@ -20,29 +20,29 @@ public class UserRegistration {
 			inp = new Scanner(System.in);
 			System.out.println("Select an option:");
 			String num=inp.next();
-			switch (num) {
-			case "1":
-				menu.validateFirstname();
-				break;
-			case "2":
-				menu.validatelastName();
-				break;
-			case "3":
-				menu.validateEmail();
-				break;
-			case "4":
-				menu.validatephone();
-				break;
-			case "5":
-				menu.validatepassword();
-				break;
-			case "0":
-				cond=0;
-				break;
-			default:
-				System.out.println("Wrong option");
-				break;
-			}
+//			switch (num) {
+//			case "1":
+//				menu.validateFirstname();
+//				break;
+//			case "2":
+//				menu.validatelastName();
+//				break;
+//			case "3":
+//				menu.validateEmail();
+//				break;
+//			case "4":
+//				menu.validatephone();
+//				break;
+//			case "5":
+//				menu.validatepassword();
+//				break;
+//			case "0":
+//				cond=0;
+//				break;
+//			default:
+//				System.out.println("Wrong option");
+//				break;
+//			}
 		}
 	}
 }
