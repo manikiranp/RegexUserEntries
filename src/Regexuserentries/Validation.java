@@ -80,4 +80,23 @@ public class Validation {
 		
 		
 	}
+
+	public void validateEmail() {
+		inp = new Scanner(System.in);
+		String regex = "^([a-z]+)([_+.-]?)([a-z0-9]+)@([A-Za-z0-9]+).([a-z]{2,3})((.[a-z]{2,3})?)$";
+		int i=1;
+		while(i>0) {
+			System.out.println("Enter the Email address:");
+			String email=inp.nextLine();
+			if (email.matches(regex)) {
+			i=-1;
+			System.out.println("Valid");
+		}
+		else  {
+			System.out.println("InValid");
+			}
+		
+		}
+	}
+
 }

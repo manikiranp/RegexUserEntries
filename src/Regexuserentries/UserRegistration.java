@@ -13,6 +13,7 @@ public class UserRegistration {
 			System.out.println("User Registration:\n"
 					+ "1) Firstname\n"
 					+ "2) Lastname\n"
+					+ "3) Email\n"
 					+ "4) Phonenumber\n"
 					+ "5) Password\n"
 					+ "0) Close");
@@ -25,6 +26,9 @@ public class UserRegistration {
 				break;
 			case "2":
 				menu.validatelastName();
+				break;
+			case "3":
+				menu.validateEmail();
 				break;
 			case "4":
 				menu.validatephone();
