@@ -38,8 +38,12 @@ public class Validation {
 	public boolean validateEmail(String email) {
 		
 			String regex = "^([a-z]+)([_+.-]?)([a-z0-9]+)@([A-Za-z0-9]+).([a-z]{2,3})((.[a-z]{2,3})?)$";	
-			Pattern pattern=Pattern.compile(regex);
-			return pattern.matcher(email).matches();
+//			Pattern pattern=Pattern.compile(regex);
+//			return pattern.matcher(email).matches();
+			if (email.matches(regex)) 
+				return true;
+			else
+				return false;
 			
 	}
 
