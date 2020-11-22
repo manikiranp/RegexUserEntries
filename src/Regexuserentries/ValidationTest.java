@@ -1,6 +1,5 @@
 package Regexuserentries;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 
 import org.junit.Assert;
@@ -21,8 +20,15 @@ public class ValidationTest {
 		Validation validation=new Validation();
 		for (String name : validmails)
 		{
-		boolean result=validation.validateEmail(name);
-		Assert.assertEquals(true, result);
+		boolean result;
+		try {
+			result = validation.validateEmail(name);
+			Assert.assertEquals(true, result);
+		} catch (ValidationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		}
 		
 	}
@@ -33,8 +39,15 @@ public class ValidationTest {
 		Validation validation=new Validation();
 		for (String name : Invalidmails)
 		{
-		boolean result=validation.validateEmail(name);
-		Assert.assertEquals(false, result);
+		boolean result;
+		try {
+			result = validation.validateEmail(name);
+			Assert.assertEquals(false, result);
+		} catch (ValidationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		}
 	}
 } 

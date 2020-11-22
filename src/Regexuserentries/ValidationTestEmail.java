@@ -47,7 +47,12 @@ public class ValidationTestEmail {
 	@Test
 	public void testValidateEmail() {
 		
-		assertEquals(expectedvalidation, validation.validateEmail(email));
+		try {
+			assertEquals(expectedvalidation, validation.validateEmail(email));
+		} catch (ValidationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
