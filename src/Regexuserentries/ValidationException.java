@@ -3,11 +3,13 @@ package Regexuserentries;
 import Regexuserentries.ValidationException.ExceptionType;
 
 public class ValidationException extends Exception {
-	public ExceptionType type;
 	
 	enum ExceptionType{
-		ENTEREDNULL,NO_INPUT
+		ENTEREDNULL,ENTERED_EMPTY
 	}
+	
+	public ExceptionType type;
+	
 	
 	public ValidationException(ExceptionType type, String s) {
 		super(s);

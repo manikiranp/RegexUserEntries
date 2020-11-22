@@ -121,7 +121,7 @@ public class ValidationTestforMethods {
 		try {
 			result = uservalid.validateName(null);
 		} catch (ValidationException e) {
-			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL,e.getType());
+			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL, e.getType());
 		}
 	}
 	
@@ -132,31 +132,32 @@ public class ValidationTestforMethods {
 		try {
 			result = uservalid.validatephone(null);
 		} catch (ValidationException e) {
-			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL,e.getType());
+			//e.printStackTrace();
+			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL, e.getType());
 			
 		}
 	}
 	
 	@Test
-	public void testValidatepassword_whennull_throwexception() {
+	public void testValidatepassword_whenempty_throwexception() {
 		Validation uservalid= new Validation();
 		boolean result;
 		try {
-			result = uservalid.validatepassword(null);
+			result = uservalid.validatepassword("");
 		} catch (ValidationException e) {
-			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL,e.getType());
+			Assert.assertEquals(ValidationException.ExceptionType.ENTERED_EMPTY, e.getType());
 		}
 		
 	}
 	
 	@Test
-	public void testValidateEmail_whennull_throwexception() {
+	public void testValidateEmail_whenempty_throwexception() {
 		Validation uservalid= new Validation();
 		boolean result;
 		try {
-			result = uservalid.validatepassword(null);
+			result = uservalid.validatepassword("");
 		} catch (ValidationException e) {
-			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL,e.getType());
+			Assert.assertEquals(ValidationException.ExceptionType.ENTERED_EMPTY, e.getType());
 			}
 		
 		}
