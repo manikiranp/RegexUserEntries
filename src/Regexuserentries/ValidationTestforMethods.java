@@ -132,7 +132,6 @@ public class ValidationTestforMethods {
 		try {
 			result = uservalid.validatephone(null);
 		} catch (ValidationException e) {
-			//e.printStackTrace();
 			Assert.assertEquals(ValidationException.ExceptionType.ENTEREDNULL, e.getType());
 			
 		}

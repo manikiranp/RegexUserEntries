@@ -2,6 +2,8 @@ package Regexuserentries;
 
 import java.util.Scanner;
 
+
+
 public class UserRegistration {
 	private static Scanner inp;
 
@@ -22,13 +24,7 @@ public class UserRegistration {
 			String num=inp.next(); 
 			switch (num) {
 			case "1":
-				try {
-					menu.validateName("ni");
-				} catch (ValidationException e) {
-					System.out.println("Invakda a");
-					
-				}
-				continue;
+//					menu.validateName();
 //			case "2":
 //				menu.validatelastName();
 //				break;
@@ -36,12 +32,7 @@ public class UserRegistration {
 //				menu.validateEmail();
 //				break;
 			case "4":
-				try {
-				menu.validatephone("+91090909090");
-				}catch (ValidationException e) {
-					System.out.println("Exception occured:"+e.getMessage());
-					
-				}
+//				menu.validatephone();
 				break;
 //			case "5":
 //				menu.validatepassword();

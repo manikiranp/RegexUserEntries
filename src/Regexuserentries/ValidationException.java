@@ -1,6 +1,6 @@
 package Regexuserentries;
 
-import Regexuserentries.ValidationException.ExceptionType;
+
 
 public class ValidationException extends Exception {
 	
