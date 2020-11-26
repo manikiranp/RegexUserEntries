@@ -1,17 +1,9 @@
 package Regexuserentries;
 
 import java.util.Scanner;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
-@FunctionalInterface
 
-interface Regextesting {
-	boolean test(String a,String b);
-	static boolean result(String a,String b) {
-		if(a.matches(b)) {
-			return true;}
-			else return false;
-	}
-}
 
 public class Validation {
 	
@@ -21,11 +13,12 @@ public class Validation {
 //		input = new Scanner(System.in);
 //		System.out.println("Enter the  Firstname:");
 //		String inp=input.nextLine();
-		String regex = "^[A-Z][a-z]{2,}$";
+//		String regex = "^[A-Z][a-z]{2,}$";
 		try {
 		if (inp.length()==0) 
 		throw new ValidationException(ValidationException.ExceptionType.ENTERED_EMPTY,"Follow proper pattern");
-		return Regextesting.result(inp, regex);
+		Predicate<String> matcher = n -> (n.matches("^[A-Z][a-z]{2,}$"));
+		return matcher.test(inp);
 		}
 		catch (NullPointerException e) {
 			System.out.println(e.getMessage());
@@ -34,11 +27,11 @@ public class Validation {
 	}
 	
 	public boolean validatephone(String inp) throws ValidationException {
-		String regex = "^[+][1-9]{1}[0-9]{0,2} [1-9]{1}[0-9]{9}$";
 		try {
 			if (inp.length()==0) 
 				throw new ValidationException(ValidationException.ExceptionType.ENTERED_EMPTY,"Follow proper pattern");
-			return Regextesting.result(inp, regex);
+			Predicate<String> matcher = n -> (n.matches("^[+][1-9]{1}[0-9]{0,2} [1-9]{1}[0-9]{9}$"));
+			return matcher.test(inp);
 		}
 		catch (NullPointerException e) {
 			System.out.println(e.getMessage());
@@ -50,11 +43,12 @@ public class Validation {
 
 	public boolean validatepassword(String inp) throws ValidationException {
 	
-		String regex = "^(?=.*[A-Z])(?=.*[0-9])(?!(?:.*[@$!_%*#?&]){2})[a-zA-Z0-9@$!_%*#?&]{8,}$";
 		try {
 			if (inp.length()==0) 
 			throw new ValidationException(ValidationException.ExceptionType.ENTERED_EMPTY,"Follow proper pattern");
-			return Regextesting.result(inp, regex);
+			
+			Predicate<String> matcher = n -> (n.matches("^(?=.*[A-Z])(?=.*[0-9])(?!(?:.*[@$!_%*#?&]){2})[a-zA-Z0-9@$!_%*#?&]{8,}$"));
+			return matcher.test(inp);
 			}
 		catch (NullPointerException e) {
 			System.out.println("Invalid Input");
@@ -65,11 +59,12 @@ public class Validation {
 
 	public boolean validateEmail(String inp) throws ValidationException {
 		
-			String regex = "^([a-z]+)([_+.-]?)([a-z0-9]+)@([A-Za-z0-9]+).([a-z]{2,3})((.[a-z]{2,3})?)$";
 			try {
 				if (inp.length()==0) 
 				throw new ValidationException(ValidationException.ExceptionType.ENTERED_EMPTY,"Follow proper pattern");
-				return Regextesting.result(inp, regex);
+				Predicate<String> matcher = n -> (n.matches("^([a-z]+)([_+.-]?)([a-z0-9]+)@([A-Za-z0-9]+).([a-z]{2,3})((.[a-z]{2,3})?)$"));
+				return matcher.test(inp);
+				
 			}
 			catch (NullPointerException e) {
 				System.out.println("Invalid Input");
